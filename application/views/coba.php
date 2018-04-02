@@ -1,1 +1,0 @@
-<h1> Long Die Madura </h1>

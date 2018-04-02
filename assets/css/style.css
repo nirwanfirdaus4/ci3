@@ -1,0 +1,31 @@
+header{
+	background-color: #e74c3c;
+}
+.inc{
+	font-size: 170%;
+	color: white;
+	padding-top: 3%; 
+}
+.ul{
+	list-style: none;
+	padding-top: 4%;
+	text-align : right;
+}
+a{
+	text-decoration: none;
+	color: white;
+	padding-right: 6%;
+	font-size: 110%;
+
+}
+li{
+	display: inline;
+}
+.back1{
+	background-image: url("assets/img/case.jpg");
+	/*background-image: url(asset/images/main.jpg);	*/
+}
+.big1{
+	/*font-size: 200%;*/
+	color: red;
+}
