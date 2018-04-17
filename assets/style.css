@@ -62,7 +62,6 @@ li{
 }
 .lets{
 	padding-top: 10%;
-	padding-bottom: 10%;
 	font-size: 170%;
 }
 
@@ -98,11 +97,20 @@ footer{
 	width: 90%;	
 }
 .jk{
-	padding-top: 10%;
+	padding-top: 3%;
 }
 .them{
 	padding-top: 6%;
 }
 .os{
 	padding-bottom: 10%;
+}
+.joker{
+	width: 70%;
+}
+.topUp{
+	margin-top: 14%;
+}
+.tabTop{
+	margin-top: 5%;
 }

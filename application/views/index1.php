@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Welcome</title>
-	<link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
-	<link href="<?php echo base_url('assets/vendor/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
-	<link href="<?php echo base_url('assets/style.css'); ?>" rel="stylesheet" type="text/css">
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-</head>
 <body>
-<header>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6">
-				<p class="inc"><b>Incridible</b></p>	
-			</div>
-			<div class="col-lg-6">
-				<ul class="ul">
-					<li> <a href="<?php echo site_url('Home') ?>">Home</a></li>
-					<li> <a href="<?php echo site_url('About') ?>">About</a></li>
-					<li> <a href="<?php echo site_url('Blog') ?>">Blog</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</header>	
-
 <div class="backs1">	
 	<div class="container-fluid">
 		<div class="row">
@@ -46,18 +19,15 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-lg-3">
-			
+		<div class="col-lg-3">		
 		</div>
 		<div class="col-lg-6">
 			<p align="center"> We really understand the wishes of the clients who really want to create a good website for their respective interests, so we always put the client's point of view and advise them to maximize the client project </p>			
 		</div>
-		<div class="col-lg-3">
-			
+		<div class="col-lg-3">			
 		</div>
 	</div>
 </div>
-
 <div class="container-fluid fluida">
 	<div class="row">
 		<div class="col-lg-6">
@@ -102,9 +72,3 @@
 		</div>
 	</div>
 </div>
-
-<footer>
-	<p class="Copyright" align="center">Copyright 2018 Incridible All rights reserved.</p>
-</footer>
-</body>
-</html>

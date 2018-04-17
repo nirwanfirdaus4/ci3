@@ -3,24 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class About extends CI_Controller {
 
-	// public function __construct()
-	// {
-	// 	parent::__construct();
-	// 	$this->load->model('Model_mhs');
-	// }
-
 	public function index()
 	{
-		// $data['mhs'] = $this->Model_mhs->getMhs();
-		$this->load->view('about');	
+		$this->load->view('header');			
+		$this->load->view('about');
+		$this->load->view('footer');
 	}
 
-	// public function lol()
-	// {
-	// 	echo "lol";
-	// }
-
 }
-
-/* End of file cek.php */
-/* Location: ./application/controllers/cek.php */
