@@ -1,33 +1,36 @@
-	<?php echo form_open_multipart(base_url('Panel/edit_aksi')); ?> 
-	<div class="container" style="padding-right: 500px; padding-top: 20px; ">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h3><span class="fa fa-edit"></span> Edit Articel</h3>
-					<a  class="btn" href="#"><span class="fa fa-arrow-left"></span>  Back</a>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				
 			</div>
-			<div class="modal-body">
-			   		<input type="hidden" class="form-control" placeholder="Group ID" name="id_blog" value="<?php echo $data['id']; ?>">
-					<div class="form-group">
-						<label>Judul</label>
-						<input name="judul" required="required" type="text" class="form-control" value="<?php echo $data['judul']; ?>">
-					</div>
-					<div class="form-group">
-						<label>Isi artikel</label>
-						<input name="isi" required="required"  class="form-control" value="<?php echo $data['isi']; ?>">
-					</div>
-					<div class="form-group">
-						<label>Gambar</label>
-						<input name="images" required="required" type="file" class="form-control" >
-					</div>
-					<div class="form-group">
-					<i>	<td>Tanggal Posting  &nbsp :  &nbsp </td>
-          				<td><?php echo $data['tanggal'] ?></td> </i>
-					</div>
-					</div>
-					<div class="modal-footer">
-						<input type="submit" class="btn btn-primary" name="simpan" value="Save">
-					</div>
-				<!-- </form> -->
+			<div class="col-lg-6">
+				<?php foreach ($artikel as $key){ ?>
+				<form enctype="multipart/form-data" method="post" action="<?php echo base_url('Panel/update'); ?>">
+				<legend class="addPegawai">Edit Your Articel</legend>
+				<?php echo validation_errors(); ?>
+				<div class="form-group">
+
+					<label for="">Title</label>
+					<input type="hidden" name="id" value="<?php echo $key->id ?>">
+					<input type="text" name="judul" id="judul" class="form-control" value="<?php echo $key->judul ?>" placeholder="title">
+
+					<label for="">Content</label>
+					<input type="text" name="isi" id="isi" class="form-control" value="<?php echo $key->isi ?>" placeholder="content">
+
+					<label for="">Creator</label>
+					<input type="text" name="crtr" id="crtr" class="form-control" value="<?php echo $key->creator ?>" placeholder="creator">
+				</div>
+		<!-- 		<div class="form-group">
+					<label>Pictures</label><br>
+					<input type="file" name="userfile" size="20">
+				</div> -->
+				<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
 			</div>
+			<div class="col-lg-3">
+				<?php } ?>
+			</div>			
 		</div>
 	</div>
+</body>

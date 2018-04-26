@@ -14,7 +14,7 @@
       </tr>
       <?php 
         $no=1;
-        foreach($query as $b){
+        foreach($artikel as $b){
       ?>
         <tr align="center">
           <td><?php echo $no++ ?></td>

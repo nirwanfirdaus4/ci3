@@ -21,6 +21,17 @@ class Model_art extends CI_Model {
 		return $data;
 	}
 
+	// public function insertArtikel()
+	// {
+	// 	$object = array(
+	// 		'judul' => $this->input->post('nama'),
+	// 		'isi' => $this->input->post('nama'),
+	// 		'tanggal' => $this->input->post('nama'),
+	// 		'creator' => $this->input->post('nama'),
+	// 		'foto' => $this->upload->data('file_name')
+	// 	);
+	// 	$this->db->insert('artikel',$object);
+	// }
 }
 
 /* End of file Model_art.php */
