@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3">
-				
+				 
 			</div>
 			<div class="col-lg-6">
 				<?php foreach ($artikel as $key){ ?>
@@ -11,20 +11,24 @@
 				<?php echo validation_errors(); ?>
 				<div class="form-group">
 
-					<label for="">Title</label>
 					<input type="hidden" name="id" value="<?php echo $key->id ?>">
-					<input type="text" name="judul" id="judul" class="form-control" value="<?php echo $key->judul ?>" placeholder="title">
+					<input type="text" name="judul" id="judul" class="form-control space8" value="<?php echo $key->judul ?>" placeholder="title">
 
-					<label for="">Content</label>
-					<input type="text" name="isi" id="isi" class="form-control" value="<?php echo $key->isi ?>" placeholder="content">
+					<select  name="kategori" id="kategori" class="form-control space8">
+						<?php
+							$data['kategori'] = $this->data_crud->getKategori();
+						 foreach ($kategori as $key): ?>
+							<option value="<?php echo $key->id_kategori ?>"><?php echo $key->nama_kategori; ?></option>
+						<?php endforeach ?>
+					</select>
 
-					<label for="">Creator</label>
-					<input type="text" name="crtr" id="crtr" class="form-control" value="<?php echo $key->creator ?>" placeholder="creator">
+					<textarea rows="4" name="isi" id="isi" class="form-control space8" placeholder="content"><?php echo $key->isi ?></textarea>
+
+					<input type="text" name="crtr" id="crtr" class="form-control space8" value="<?php echo $key->creator ?>" placeholder="creator">
 				</div>
-		<!-- 		<div class="form-group">
-					<label>Pictures</label><br>
+				<div class="form-group">
 					<input type="file" name="userfile" size="20">
-				</div> -->
+				</div>
 				<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
 			</div>

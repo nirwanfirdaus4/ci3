@@ -1,6 +1,13 @@
 header{
 	background-color: #e74c3c;
 }
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+
 .inc{
 	font-size: 170%;
 	color: white;
@@ -11,13 +18,32 @@ header{
 	padding-top: 4%;
 	text-align : right;
 }
-a{
+.abof{
+	text-decoration: none;
+	color: white;
+	padding-right: 6%;
+	font-size: 96%;
+}
+.abof:hover{
+	color: white;
+}
+.bbof{
 	text-decoration: none;
 	color: white;
 	padding-right: 6%;
 	font-size: 110%;
-
 }
+.bbof:hover{
+	color: white;
+}
+.cbof{
+	color: #504f45;
+}
+.cbof:hover{
+	color: black;
+}
+
+
 li{
 	display: inline;
 }
@@ -92,6 +118,7 @@ footer{
 	font-size: 200%;
 	padding-top: 4%;
 	padding-bottom: 3%;
+	/*color: #504f45;	*/
 }
 .hes{
 	width: 90%;	
@@ -111,9 +138,24 @@ footer{
 .topUp{
 	margin-top: 14%;
 }
+.topUp1{
+	margin-top: 1%;
+}
 .tabTop{
 	margin-top: 5%;
 }
 .addPegawai{
 	margin-top: 10%;
+}
+.space8{
+	margin-top: 3%;
+}
+.btnr{
+	background-color: #e74c3c;
+	color: white;
+	border-radius: 0%;
+	margin-top: 3%;
+}
+.thems{
+	margin-top: 6%;
 }

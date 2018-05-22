@@ -8,6 +8,11 @@ class Data_crud extends CI_Model {
 		return $query->result(); // Kode ini digunakan untuk mengembalikan hasil operasi $res menjadi sebuah array
 	}
 
+	public function getKategori()
+	{
+		return $this->db->get('kategori')->result();
+	}
+
 	function Insert($data){
 		$this->db->insert('artikel', $data); // Kode ini digunakan untuk memasukan record baru kedalam sebuah tabel
         
@@ -19,28 +24,15 @@ class Data_crud extends CI_Model {
 
 		$this->db->where('id', $id);
 
-		// $path = realpath(APPPATH . '../assert(assertion)et/image/'.$images);
-
 		unlink('assets/img/uploads/'.$row->gambar);
 
 		$this->db->delete('artikel', array('id' => $id));
 	}
 
-	// function Get_single($id){
-	// 	$data = array();
-	// 	$options = array('id' => $id);
-	// 	$Q = $this -> db -> get_where('artikel',$options,1);
-	// 		if($Q->num_rows()>0){
-	// 			$data = $Q->row_array();
-	// 		}
-	// 	$Q ->free_result();
-	// 	return $data; 
-	// }
-
 	function edit($where,$table){  
 	 return $this->db->get_where($table,$where);
 	}
-
+ 
 	function update_data($where,$data,$table){
 	  $this->db->where($where);
 	  $this->db->update($table,$data);

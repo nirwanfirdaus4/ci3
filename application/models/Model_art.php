@@ -8,7 +8,13 @@ class Model_art extends CI_Model {
 		$query = $this->db->query('select * from artikel');
 		return $query->result();
 	}
+	public function Show_category($id)
+	{
 
+		$query = $this->db->query("select * from artikel where id_kategori=" .$id);
+		return $query->result();
+
+	}
 	public function Get_single($id)
 	{
 		$data = array();
@@ -20,18 +26,6 @@ class Model_art extends CI_Model {
 		$Q ->free_result();
 		return $data;
 	}
-
-	// public function insertArtikel()
-	// {
-	// 	$object = array(
-	// 		'judul' => $this->input->post('nama'),
-	// 		'isi' => $this->input->post('nama'),
-	// 		'tanggal' => $this->input->post('nama'),
-	// 		'creator' => $this->input->post('nama'),
-	// 		'foto' => $this->upload->data('file_name')
-	// 	);
-	// 	$this->db->insert('artikel',$object);
-	// }
 }
 
 /* End of file Model_art.php */

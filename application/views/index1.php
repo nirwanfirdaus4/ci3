@@ -59,7 +59,7 @@
 
 			</div>
 			<div class="col-lg-6">
-				<center><img class="gold" src="assets/img/Capture.png"></center>
+				<center><img class="gold" src="assets/img/Capture.PNG"></center>
 			</div>
 		</div>
 	</div>

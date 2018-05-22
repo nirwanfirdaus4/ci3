@@ -1,4 +1,4 @@
-<body>
+<body> 
 	
 	<div class="container">
 		<div class="row">
@@ -26,9 +26,9 @@
 
           <td>
             <a href="Panel/edit/<?php echo $b->id; ?>"  class="btn btn-primary">
-              <span class="fa fa-edit">  Edit</span>
+              <span class="fa fa-edit abof">  Edit</span>
             </a>
-            <a href="<?php echo base_url()."Panel/hapus/".$b->id ?> " onClick="return confirm('Delete this articel?')"  class="btn btn-danger">
+            <a href="<?php echo base_url()."Panel/hapus/".$b->id ?> " onClick="return confirm('Delete this articel?')"  class="btn btn-danger abof">
               <span class="fa fa-trash">  Delete</span>
             </a>
           </td>

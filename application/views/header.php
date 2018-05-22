@@ -16,10 +16,10 @@
 			</div>
 			<div class="col-lg-6">
 				<ul class="ul">
-					<li> <a href="<?php echo base_url().'Home' ?>">Home</a></li>
-					<li> <a href="<?php echo base_url().'About' ?>">About</a></li>
-					<li> <a href="<?php echo base_url().'Blog' ?>">Blog</a></li>
-					<li> <a href="<?php echo base_url().'Panel' ?>">Panel</a></li>
+					<li> <a class="bbof" href="<?php echo base_url().'Home' ?>">Home</a></li> 
+					<li> <a class="bbof" href="<?php echo base_url().'About' ?>">About</a></li>
+					<li> <a class="bbof" href="<?php echo base_url().'Blog' ?>">Blog</a></li>
+					<li> <a class="bbof" href="<?php echo base_url().'Panel' ?>">Panel</a></li>
 				</ul>
 			</div>
 		</div>
