@@ -8,14 +8,28 @@ class Blog extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Model_art');
 		$this->load->model('Data_crud');
+		$this->load->helper('konfigurasi');	
+		$this->load->library('pagination');
 	}
 
-	public function index()
+	public function shoul()
 	{
-		$data1['query'] = $this->Model_art->Get_artikel();		
+		$data['query'] = $this->Model_art->Get_artikel();		
 		$data['kategori'] = $this->Data_crud->getKategori();	
-		$this->load->view('header',$data);			
-		$this->load->view('bloge',$data1);
+
+		$limit_per_page = 2;
+		$start_index = ( $this->uri->segment(3) ) ? $this->uri->segment(3) : 0;
+		$total_records = $this->Model_art->get_total('artikel');
+		$data["artikel"] = $this->Model_art->get_data_pagination('artikel' , $limit_per_page, $start_index);
+		 
+		$config = paging_config('Blog/shoul',$total_records,$limit_per_page);
+		$this->pagination->initialize($config);
+
+		// Buat link pagination
+		$data["pagination"] = $this->pagination->create_links();
+
+		$this->load->view('header');			
+		$this->load->view('bloge',$data);
 		$this->load->view('footer');
 
 	}
@@ -30,11 +44,36 @@ class Blog extends CI_Controller {
 
 	public function show_category()
 	{
-		$id = $this->input->post('kategori');
-		$data['query'] = $this->Model_art->Show_category($id);	
-		$data1['kategori'] = $this->Data_crud->getKategori();
-		$this->load->view('header',$data1);
-		$this->load->view('bloge',$data);
-		$this->load->view('footer');
+			$id = $this->input->post('kategori');
+			if ($id==1) {
+
+				$data['query'] = $this->Model_art->Get_artikel();		
+				$data['kategori'] = $this->Data_crud->getKategori();	
+				$this->load->view('header');			
+				$this->load->view('bloge',$data);
+				$this->load->view('footer');
+			}else{
+				$data['query'] = $this->Model_art->Show_category($id);	
+				$data['kategori'] = $this->Data_crud->getKategori();
+				$this->load->view('header');
+				$this->load->view('bloge',$data);
+				$this->load->view('footer');		
+		}
 	}
+	// public function books()
+	// {
+	// 	$limit_per_page = 4;
+	// 	$start_index = ( $this->uri->segment(3) ) ? $this->uri->segment(3) : 0;
+	// 	$total_records = $this->Model_art->get_total('artikel');
+	// 	$data["artikel"] = $this->Model_art->get_data_pagination('artikel' , $limit_per_page, $start_index);
+		 
+	// 	$config = paging_config('Blog/books/',$total_records,$limit_per_page);
+	// 	$this->pagination->initialize($config);
+			
+	// 	// Buat link pagination
+	// 	$data["pagination"] = $this->pagination->create_links();
+	// 	// $this->load->view('header');
+	// 	$this->load->view('bloge', $data);
+	// 	// $this->load->view('footer');
+	// }
 }

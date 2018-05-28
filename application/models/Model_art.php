@@ -13,7 +13,7 @@ class Model_art extends CI_Model {
 
 		$query = $this->db->query("select * from artikel where id_kategori=" .$id);
 		return $query->result();
-
+ 
 	}
 	public function Get_single($id)
 	{
@@ -25,6 +25,17 @@ class Model_art extends CI_Model {
 			}
 		$Q ->free_result();
 		return $data;
+	}
+	public function get_data_pagination($table, $limit, $offset){
+		$query = $this->db->select("*")
+				->from($table)
+				->limit($limit, $offset)
+				->get();
+		return $query;
+	}
+	 
+	public function get_total($table){
+		return $this->db->count_all($table);
 	}
 }
 
